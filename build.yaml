@@ -1,5 +1,4 @@
 include:
-
   - board: nice_nano
     shield: ArcSplit_46_left
 #  - board: 
@@ -11,4 +10,6 @@ include:
   - board: nice_nano
     shield: ArcSplit_46_right
 
+  - board: nice_nano
+    shield: settings_reset
 
