@@ -1,4 +1,4 @@
-#include "diy_keyboard_v1-layouts.dtsi"
+#include "ArcSplit_46-layout.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
@@ -15,7 +15,7 @@
     };
 };
 
-&physical_layout_diy_keyboard_v1 {
+&physical_layout_ArcSplit_46 {
     transform = <&matrix_transform0>;
 };
 
@@ -30,6 +30,7 @@
         steps = <80>;
         status = "disabled";
     };
+
     encoder_right0: encoder_right0 {
         compatible = "alps,ec11";
         steps = <80>;
@@ -49,17 +50,17 @@
         #address-cells = <1>;
         #size-cells = <0>;
 
-        input_split_right0: input_split_right0@0 {
+        glidepoint_split: glidepoint_split@0 {
             compatible = "zmk,input-split";
             reg = <0>;
             status = "disabled";
         };
     };
 
-    input_listener_right0: input_listener_right0 {
+    glidepoint_listener: glidepoint_listener {
         compatible = "zmk,input-listener";
         status = "disabled";
-        device = <&input_split_right0>;
+        device = <&glidepoint_split>;
     };
 };
 

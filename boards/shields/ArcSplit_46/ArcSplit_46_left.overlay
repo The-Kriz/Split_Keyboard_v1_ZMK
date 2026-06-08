@@ -1,4 +1,4 @@
-#include "diy_keyboard_v1.dtsi"
+#include "ArcSplit_46.dtsi"
 
 / {
     kscan0: kscan0 {
@@ -24,26 +24,21 @@
     };
 };
 
-&physical_layout_diy_keyboard_v1 {
+&physical_layout_ArcSplit_46 {
     kscan = <&kscan0>;
 };
-// == Input devices ==
-// Input devices on peripheral parts
-// Enabling input listeners and input-split to receive input events from peripherals
-&input_split_right0 { status = "okay"; };
-&input_listener_right0 { status = "okay"; };
+
+
+&glidepoint_split {
+    status = "okay";
+};
+
+&glidepoint_listener {
+    status = "okay";
+};
 
 &encoder_left0 {
     a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
     b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
     status = "okay";
 };
-
-// Assigning dummy pins to other part's encoders
-// just to satisfy the devicetree requirements.
-// No code will be compiled for these disabled encoders.
-&encoder_right0 {
-    a-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    b-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-};
-

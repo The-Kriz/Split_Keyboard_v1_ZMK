@@ -1,0 +1,14 @@
+file_format: "1"
+id: ArcSplit_46
+name: ArcSplit_46
+type: shield
+url: https://github.com/The-Kriz/ArcSplit_46
+requires: [pro_micro]
+features:
+  - keys
+  - trackpad
+  - encoder
+  - studio
+siblings:
+  - ArcSplit_46_left
+  - ArcSplit_46_right

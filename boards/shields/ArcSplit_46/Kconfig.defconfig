@@ -1,4 +1,4 @@
-if SHIELD_DIY_KEYBOARD_V1_LEFT
+if SHIELD_ARCSPLIT_46_LEFT
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
@@ -18,7 +18,7 @@ config BT_MAX_PAIRED
 
 endif
 
-if SHIELD_DIY_KEYBOARD_V1_LEFT || SHIELD_DIY_KEYBOARD_V1_RIGHT
+if SHIELD_ARCSPLIT_46_LEFT || SHIELD_ARCSPLIT_46_RIGHT
 
 config ZMK_SPLIT
     default y
@@ -28,10 +28,8 @@ config ZMK_POINTING
 
 endif
 
-# ---------------------
-# Kconfig for shield "diy_keyboard_v1_right" with board "nice_nano_v2"
-# ---------------------
-if BOARD_NICE_NANO_V2 && SHIELD_DIY_KEYBOARD_V1_RIGHT
+
+if BOARD_NICE_NANO_V2 && SHIELD_ARCSPLIT_46_RIGHT
 
 config I2C
     default y
