@@ -18,14 +18,6 @@
             bindings = <&bt BT_CLR>;
         };
 
-        // Utilities so that Studio's use of "df" looks nice
-        df_win: df_win {
-            display-name = "Set Connection Default Layer to Windows";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&df WINDOWS>;
-        };
-
         // Macro KP
         kpss: kpss {
             display-name = "Key Press (No Repeat)";
