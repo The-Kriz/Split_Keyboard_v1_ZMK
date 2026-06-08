@@ -30,11 +30,11 @@
 
 
 &glidepoint_split {
-    status = "disabled";   // change from "okay"
+    status = "okay";
 };
 
 &glidepoint_listener {
-    status = "disabled";   // change from "okay"
+    status = "okay";
 };
 
 &encoder_left0 {
