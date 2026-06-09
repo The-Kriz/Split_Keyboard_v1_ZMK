@@ -32,10 +32,11 @@
     kscan = <&kscan0>;
 };
 
-
 // pin control for i2c0
-// - SDA on D2
-// - SCL on D3
+// - SDA on 0.17
+// - SCL on 0.20
+// - DR  on 0.22
+
 &pinctrl {
     /* configuration for i2c0 device, default state */
     i2c0_default: i2c0_default {
@@ -60,7 +61,7 @@
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
-    clock-frequency = <I2C_BITRATE_FAST>;
+    clock-frequency = <I2C_BITRATE_STANDARD>;
 
     glidepoint: glidepoint@2a {
         status = "okay";
