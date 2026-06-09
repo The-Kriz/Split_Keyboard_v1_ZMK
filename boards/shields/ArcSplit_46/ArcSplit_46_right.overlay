@@ -75,6 +75,7 @@
 };
 
 &glidepoint_split {
+    status = "okay";
     device = <&glidepoint>;
 };
 
