@@ -11,10 +11,11 @@
 
 // Layer numbers for use by the keymap & macros
 #define WINDOWS   0
-#define SYMBOLS   1
-#define NUMPAD    2
-#define FKEYS     3
-#define KB_CONFIG 4
+#define TOP_ONLY  1
+#define SYMBOLS   2
+#define NUMPAD    3
+#define FKEYS     4
+#define KB_CONFIG 5
 
 #include "position_map.dtsi"
 #include "ArcSplit_46-layout.dtsi"
@@ -35,6 +36,21 @@
        &kp TAB        &kp A            &kp S           &kp D           &kp F           &kp G     /*├─────────────╮     ╭─────────────┤*/  &kp H           &kp J           &kp K           &kp L           &kp SEMI       &kp SQT
        &kp LSHIFT     &kp Z            &kp X           &kp C           &kp V           &kp B           &kp F16             &kp F17        &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH       &scw RSHIFT 0
 /* ╰───────────────┴───────────────┤*/ &mo KB_CONFIG   &kp LGUI        &kp LALT        &kp LCTRL   &lt NUMPAD SPACE     &lt FKEYS ENTER   &td_sym        &mt RCTRL K_APP    &kp RALT        &kp DEL   //├───────────────┴───────────────╯
+//                                 ╰───────────────┴───────────────┴───────────────┴───────────────┴─────────────╯     ╰─────────────┴───────────────┴───────────────┴───────────────┴───────────────╯
+            >;
+        };
+
+        // Plain top-row only layer — no hold-taps, no tap-dance, no combos.
+        // Use this in office where you want predictable single-tap behaviour.
+        top_only_layer {
+            display-name = "Top Only";
+            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
+            bindings = <
+// ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮                                 ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
+       &kp GRAVE      &kp Q            &kp W           &kp E           &kp R           &kp T     /*|                                 |*/  &kp Y           &kp U           &kp I           &kp O           &kp P          &kp BSPC
+       &kp TAB        &kp A            &kp S           &kp D           &kp F           &kp G     /*├─────────────╮     ╭─────────────┤*/  &kp H           &kp J           &kp K           &kp L           &kp SEMI       &kp SQT
+       &kp LSHIFT     &kp Z            &kp X           &kp C           &kp V           &kp B           &kp F16             &kp F17        &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH       &kp RSHIFT
+/* ╰───────────────┴───────────────┤*/ &mo KB_CONFIG   &kp LGUI        &kp LALT        &kp LCTRL       &kp SPACE           &kp ENTER      &mo SYMBOLS    &mt RCTRL K_APP    &kp RALT        &kp DEL   //├───────────────┴───────────────╯
 //                                 ╰───────────────┴───────────────┴───────────────┴───────────────┴─────────────╯     ╰─────────────┴───────────────┴───────────────┴───────────────┴───────────────╯
             >;
         };
