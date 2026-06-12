@@ -1,11 +1,11 @@
 include:
   - board: nice_nano/nrf52840/zmk
     shield: ArcSplit_46_left
-#  - board: 
-#    shield: ArcSplit_46_left
-#    snippet: studio-rpc-usb-uart
-#    cmake-args: -DCONFIG_ZMK_STUDIO=y
-#    artifact-name: ArcSplit_46_left_with_studio
+    
+  - board: nice_nano/nrf52840/zmk
+    shield: ArcSplit_46_left
+    snippet: studio-rpc-usb-uart
+    artifact-name: ArcSplit_46_left_studio
 
   - board: nice_nano/nrf52840/zmk
     shield: ArcSplit_46_right
