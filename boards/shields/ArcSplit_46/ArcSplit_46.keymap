@@ -12,11 +12,10 @@
 // Layer numbers for use by the keymap & macros
 #define WINDOWS   0
 #define GAMING    1
-#define TOP_ONLY  2
-#define SYMBOLS   3
-#define NUMPAD    4
-#define FKEYS     5
-#define KB_CONFIG 6
+#define SYMBOLS   2
+#define NUMPAD    3
+#define FKEYS     4
+#define KB_CONFIG 5
 
 #include "position_map.dtsi"
 #include "ArcSplit_46-layout.dtsi"
