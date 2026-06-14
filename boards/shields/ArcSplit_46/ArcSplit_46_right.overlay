@@ -86,3 +86,15 @@
 };
 
 
+/ {
+    aliases {
+        indicator-led = &led0;
+    };
+
+    led_indicator: led_indicator {
+        compatible = "gpio-leds";
+        led0: led_0 {
+            gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
+        };
+    };
+};
