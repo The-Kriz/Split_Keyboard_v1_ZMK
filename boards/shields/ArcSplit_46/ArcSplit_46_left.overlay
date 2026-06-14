@@ -42,3 +42,12 @@
     b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
     status = "okay";
 };
+
+/ {
+    led_indicator: led_indicator {
+        compatible = "gpio-leds";
+        led0: led_0 {
+            gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
+        };
+    };
+};
